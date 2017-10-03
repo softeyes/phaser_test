@@ -2,13 +2,33 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Game 1</title>
 	<script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 	<script src="js/phaser.js"></script>
 	<script src="js/javascript.js"></script>
 
 </head>
 <body>
-	
+
+<script type="text/javascript">
+
+var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update });
+
+function preload() {
+	game.load.image('sky', 'images/sky.png');
+    game.load.image('ground', 'images/platform.png');
+    game.load.image('star', 'images/star.png');
+    game.load.spritesheet('dude', 'images/dude.png', 32, 48);
+}
+
+function create() {
+	game.add.sprite(0, 0, 'star');
+}
+
+function update() {
+}
+
+</script>
+
 </body>
 </html>
